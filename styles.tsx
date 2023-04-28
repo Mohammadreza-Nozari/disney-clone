@@ -43,7 +43,12 @@ export const NavMenu = styled.div`
   display: flex;
   flex: 1;
   margin-left: 25px;
+  opacity: 1;
+  visibility: visible;
   align-items: center;
+  width: auto;
+  transition: opacity 0.8s, visibility 0.8s;
+
   span {
     font-size: 13px;
     letter-spacing: 1.42px;
@@ -81,7 +86,9 @@ export const NavMenu = styled.div`
       }
     }
   }
-  @media (max-width: 768px) {
-    display: none;
+  @media (max-width: 800px) {
+    opacity: 0;
+    visibility: hidden;
+    width: 0px;
   }
 `;
